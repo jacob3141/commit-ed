@@ -18,32 +18,34 @@
 //                                                                           //
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef HIGHLIGHTER_H
+#define HIGHLIGHTER_H
 
-#include <QMainWindow>
+#include <QSyntaxHighlighter>
+#include <QTextCharFormat>
 
-namespace Ui {
-class MainWindow;
-}
+class QTextDocument;
 
-class MainWindow :
-    public QMainWindow {
+class Highlighter :
+    public QSyntaxHighlighter {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    Highlighter(QTextDocument *parent = 0);
 
-    void setCommitMessage(QString message);
-    QString commitMessage();
-
-public slots:
-    void on_textEditSummary_textChanged();
-    void on_textEditDescription_textChanged();
+protected:
+    void highlightBlock(const QString &text) Q_DECL_OVERRIDE;
 
 private:
-    Ui::MainWindow *ui;
+    struct HighlightingRule {
+        QRegExp pattern;
+        QTextCharFormat format;
+    };
+
+    QVector<HighlightingRule> highlightingRules;
+
+    QTextCharFormat keywordFormat;
+    QTextCharFormat singleLineCommentFormat;
 };
 
-#endif // MAINWINDOW_H
+#endif // HIGHLIGHTER_H

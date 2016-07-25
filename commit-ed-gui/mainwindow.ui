@@ -55,6 +55,7 @@
       <property name="font">
        <font>
         <family>Ubuntu Mono</family>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="lineWrapMode">
@@ -62,6 +63,9 @@
       </property>
       <property name="lineWrapColumnOrWidth">
        <number>72</number>
+      </property>
+      <property name="acceptRichText">
+       <bool>false</bool>
       </property>
       <property name="placeholderText">
        <string>change something within the application</string>
@@ -96,6 +100,7 @@
       <property name="font">
        <font>
         <family>Ubuntu Mono</family>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="lineWrapMode">
@@ -103,6 +108,9 @@
       </property>
       <property name="lineWrapColumnOrWidth">
        <number>72</number>
+      </property>
+      <property name="acceptRichText">
+       <bool>false</bool>
       </property>
       <property name="placeholderText">
        <string/>
