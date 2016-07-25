@@ -1,4 +1,5 @@
-# commit-ed
+![Screenshot](https://github.com/cybercatalyst/commit-ed/blob/master/commit-ed.png "Screenshot")
+
 Specialized lightweight git commit message editor
 
 # How to build
