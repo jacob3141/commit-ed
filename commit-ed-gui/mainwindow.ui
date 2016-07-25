@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CommitEd</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/application-vnd.scribus.svg</normaloff>:/application-vnd.scribus.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>If applied, this commit will </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEditSummary">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu Mono</family>
+       </font>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::FixedColumnWidth</enum>
+      </property>
+      <property name="lineWrapColumnOrWidth">
+       <number>72</number>
+      </property>
+      <property name="placeholderText">
+       <string>change something within the application</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBarProblem">
+      <property name="maximum">
+       <number>72</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="format">
+       <string>very short                                              perfect                                               very long</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Description:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEditDescription">
+      <property name="font">
+       <font>
+        <family>Ubuntu Mono</family>
+       </font>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QTextEdit::FixedColumnWidth</enum>
+      </property>
+      <property name="lineWrapColumnOrWidth">
+       <number>72</number>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBarSolution">
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+       </font>
+      </property>
+      <property name="maximum">
+       <number>512</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="format">
+       <string>very short                                              perfect                                               very long</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonDone">
+        <property name="text">
+         <string>Done</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonDone</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>645</x>
+     <y>452</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

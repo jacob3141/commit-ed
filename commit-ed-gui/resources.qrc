@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>application-vnd.scribus.svg</file>
+    </qresource>
+</RCC>
