@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/jacob3141)
+
 ![Screenshot](https://github.com/cybercatalyst/commit-ed/blob/master/commit-ed.png "Screenshot")
 
 Specialized lightweight git commit message editor
